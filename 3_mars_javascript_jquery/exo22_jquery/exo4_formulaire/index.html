@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo4_formulaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var champ=$('.champ');
+        var myform=$('#myform')
+        // focusin c'est pour cibler un élément dans un champ
+        champ.focusin(function(){
+          myform.css('border','2px solid green',);
+          });
+            champ.focusout(function(){
+          myform.css('border','none',);
+      });
+
+    });
+    // RESOLU GRACE A: https://www.youtube.com/watch?v=lbOXkrT_ca8
+    // EFFET DE LUEUR https://www.youtube.com/watch?v=xIsIlA-pBy8
+  </script>
+
+
+  </head>
+  <body>
+    <!--Exercice 22>exo4 jquery:
+
+    ##Exercice 4
+
+    Vous créez un formulaire avec un input "pseudo" est un input "mdp". Lorsqu'on clique sur l'un des champs, sa bordure devient verte et de 2px d'épaisseur, quand on le quitte il reprend sa forme initiale.-->
+
+
+<form id="myform" action="index.html" method="post">
+  <label for="pseudo">
+      <input class="champ" type="text" placeholder="pseudo"/>
+  mot de passe</label></br>
+  <label for="password">
+      <input type="password" class="champ"/>
+</form>
+<!-- CORRECTION
+$(function(){
+   $(".focus").focusin(function(){
+      $(this).css("border", "2px solid green");
+   });
+/*Autre faÃ§on d'Ã©cricre la mÃ©thode css():
+$(".focus").focusin(function(){
+   $(this).css({"border": "2px solid green", "border-radius", "5px"});
+});
+*/
+   $(".focus").focusout(function(){
+      $(this).css("border", "");
+   });
+});
+
+/* this: ce mot clÃ© renvoie systÃ©matiquement Ã  l'objet (la balise) dans laquelle on se situe (par exemple dans celle oÃ¹ on a cliquÃ©).*/
+
+/* focusin va au focusout : ils s'appliquent aussi aux enfants. Il y existe aussi focus qui va avec blur : ils ne s'appliquent qu'aux inputs de formulaire.*/
+
+/* La mÃ©thode css() a 2 syntaxes :
+css("propriete", "valeur")
+ou
+css({"prop1" : "valeur1", "prop2" : "valeur2"}) */
+
+
+ -->
+
+  </body>
+</html>

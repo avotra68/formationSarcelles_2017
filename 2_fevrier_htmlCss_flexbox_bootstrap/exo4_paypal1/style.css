@@ -1,0 +1,300 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica,sans-serif;
+}
+/****** LANDING PAGE ********/
+
+
+header{
+display: flex;
+/*couleur blanc affectée aux polices header*/
+color: #fff;
+width: 100%;
+font-family: "pp-sans-big-medium", Helvetica Neue, Arial, sans-serif;
+/*si la police pp-sans-big-medium ne fonctionne pas prend Helvetica Neue, si Helvetica Neue ne fonctionne pas prend Arial etc.*/
+}
+
+.page{
+  background-image: url(images/lead.jpg);
+  /*cover: pour concentrer l'image au mileu sans perdre sa qualité*/
+  background-size: cover;
+  width: 100%;
+  height: 73vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.filtre{
+  width: 100%;
+  height:73vh;
+  /*pour assombrir un peu l'image dde fond. si on met 1 au lieu de 0.5 l'image sera toute noire*/
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+#logo{
+  background-image: url(images/logo.png);
+  background-size: contain;
+  height: 50px;
+  width: 120px;
+  margin: 10px 0 0 50px;
+  background-repeat: no-repeat;
+
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  margin-right: 60px;
+}
+
+ul li{
+  padding: 0 25px 0 50px;
+  font-size: 14px;
+}
+
+.nav{
+display: flex;
+/*pour faire la ligne blanche en dessous des menu de navigation==>border-bottom: 1px solid white*/
+border-bottom: 1px solid white;
+align-items: center;
+width: 100%;
+}
+
+.identifiant{
+  position: absolute;
+  right: 60px;
+  top: 8px;
+  display: inline-flex;
+ }
+
+ .identifiant #connexion, #compte{
+   padding: 8px 5px 8px 5px;
+   border: 1px solid white;
+   margin: 0 5px 0 5px;
+   border-radius: 50px;
+ }
+
+ #compte{
+   color: black;
+   background-color: white;
+ }
+
+.milieu{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+  }
+
+
+  #bouton1{
+  background-color: #0070ba;
+  border: 1px solid #0070ba;
+  border-radius: 50px;
+  padding: 12px 50px 12px 50px;
+  margin: 20px 0 10px 0;
+  }
+
+#bouton2{
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 12px 50px 12px 50px;
+  margin: 10px 0 0 0;
+
+}
+
+.identifiant a, .milieu a {
+text-decoration: none;
+color: white;
+}
+
+  .aside{
+  background-color: #ccc;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  /*padding pour décaler "découvrir" vers droite padding: 0 0 0 75px;*/
+
+  }
+  .aside li{
+    padding: 12px;
+    /*définir espace entre les liens "Découvrir, Avantages,Espaces Shooping */
+  }
+  .aside a{
+    color: #444;
+    position: relative;
+    left: 50px;
+  }
+
+  /****** SECTION 1 *****/
+
+/*style du texte*/
+
+h2{
+  font-family: helvetica;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  padding-top: 30px
+}
+
+h3{
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: helvetica;
+  margin-bottom: 0px;
+  padding-bottom:5px;
+}
+
+p{
+  font-family: helvetica;
+  font-size: 15px;
+  margin-top: 0px;
+  letter-spacing: .5px;
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  font-family: helvetica;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+
+
+/***** SECTION 1_MIDDLE *****/
+
+/*positionnement flex*/
+.section1_middle{
+  display: flex;
+  justify-content:space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right:50px;
+}
+
+/*** TEXTE Section_1 ***/
+
+.liens_section1 a{
+  color: #0070ba;
+  margin-top:100px;
+}
+
+.section1_top p{
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1px
+}
+
+.section1_middle p {
+  width: 250px;
+}
+
+/***** SECTION 1_BOTTOM *****/
+
+.section1_bottom {
+  padding-top: 30px;
+  padding-right: 100px;
+  padding-left: 100px;
+  display:flex;
+  justify-content: center;
+}
+
+.section1_bottom img {
+  position:relative;
+  top:60px;
+  width:80%;
+}
+
+/****** SECTION 2 *****/
+
+.section2_content {
+  padding-left: 50px;
+  padding-right:50px;
+}
+
+/**** BACKGROUND Section_2 ****/
+.section2 {
+    color: #fff;
+    background-color: #009cde;
+    background-image: radial-gradient(circle farthest-side at center bottom, #009cde, #003087 125%);
+    height:400px;
+}
+
+/*** TEXTE Section_2 ***/
+.section2_top h2 {
+  padding-top: 90px;
+}
+
+.section2_top h3 {
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.liens_section2 {
+  color:white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.section2_top .liens_section2 {
+  display:flex;
+  justify-content: center;
+}
+
+/**** section2_bottom ***/
+
+.section2_bottom {
+  display: flex;
+  justify-content:space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section2_bottom p {
+  width: 200px;
+}
+
+
+/******* SECTION 3 **********/
+
+section{
+padding-top: 100px;
+}
+
+.allimages img{
+margin: 30px;
+width: 220px;
+height: auto;
+}
+
+.allimages{
+margin: 100px 30px 100px 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.section4{
+ background-color: #f7f9fa
+;
+ width: 1258px;
+ height: 284px;
+ display:flex;
+ justify-content:center;
+ flex-direction: column;
+ align-items: center;
+}

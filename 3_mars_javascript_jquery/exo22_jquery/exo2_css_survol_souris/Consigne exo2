@@ -1,0 +1,2 @@
+On vous impose les classes CSS .rouge et .bleu ainsi que le html. 
+Ajouter le jQuery qui permet de mettre en rouge le texte au survol (il redevient noir quand on le quitte), et qui permet de mettre ou retirer le background du texte en bleu quand on clique sur le bouton. Pour cela, trouver le moyen d'ajouter ou de retirer les classes prédéfinies en CSS.

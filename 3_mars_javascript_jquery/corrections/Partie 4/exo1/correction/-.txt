@@ -1,0 +1,45 @@
+function filmMajeur(){//on initialise la fonction "filmMajeur"
+
+
+  var age = (prompt("Entrer votre âge"));//on déclare la variable "age" qui prend la saisie de prompt comme paramètre
+
+   if(age < 18){//si l'utilisateur rentre une valeur inférieur à 18
+
+     alert("Désolée, vous êtes mineur");// on affiche le message
+
+   }else if(isNaN(age)){//sinon si la saisie n'est pas un nombre
+
+     alert("Entrez un nombre !");//on affiche ceci
+
+   }else{
+
+       alert("Vous pouvez regarder ce film");//sinon on affiche ça
+     }
+   }
+   function filmAdo(){
+
+     var age = prompt("Entrer votre âge");
+
+      if(age < 12){
+
+        alert("Vous êtes un peu jeune !");
+
+      }else if(isNaN(age)){
+
+        alert("Entrez un nombre !");
+
+      }else if(age <= 18){
+
+        alert("Ce film est fait pour vous !");
+
+      }else if(age >=30){
+
+        alert("Je vous conseille de voir autre chose");
+
+      }
+
+      else{
+
+          alert("Vous pouvez regarder ce film");
+        }
+      }

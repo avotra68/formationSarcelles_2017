@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="testCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <!-- ## Exercice 5
+  Faire une page HTML contenant un bouton Afficher et un bouton Cacher. Au clic sur l'un ou sur l'autre afficher ou non un paragraphe de votre choix.
+ -->
+  <body>
+    <h1>Les directives Ng-show et ng-hide</h1>
+
+    <div>
+      <button ng-click="afficherParagraphe()">Afficher</button>
+      <button ng-click="cacherParagraphe()">Cacher</button>
+      <div ng-show="message" style="margin-top: 20px; padding:10px; color:blue; fontsize: 10px; height: 40px; width: 200px; border: 2px solid blue"> Voilà mon div est  affiché</div>
+
+    </div>
+  </body>
+</html>

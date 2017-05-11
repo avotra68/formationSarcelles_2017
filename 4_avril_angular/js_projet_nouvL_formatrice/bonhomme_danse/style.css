@@ -1,0 +1,57 @@
+
+#tete{
+  height: 30vh;
+  border: 2px solid black;
+  padding-top: 5vh;
+  background-color: #ffe6b3;
+  border-radius: 40px / 60px;
+  margin-top: 10vh;
+}
+#yeuxGauche, #yeuxDroite{
+  height: 3vh;
+  border-radius: 60px / 40px;
+  background: orange;
+  border: 1px solid black;
+}
+.pupille{
+  height: 1vh;
+  border-radius: 60px / 40px;
+  background: black;
+  margin-top: 1vh;
+}
+#nez{
+  height: 3vh;
+  background: orange;
+  border-radius: 60px / 40px;
+  margin-top: 7vh;
+  border: 1px solid black;
+}
+#bouche{
+  margin-top: 5vh;
+}
+.levre{
+  height: 2vh;
+  border: 1px solid black;
+  background: orange;
+  border-radius: 60px / 40px;
+}
+#gorge{
+  height: 12vh;
+  background-color: #ffe6b3;
+  border: 1px solid black;
+}
+#brasGauche, #brasDroite{
+  height: 10vh;
+  background-color: #ffe6b3;
+  border: 1px solid black;
+}
+#corps{
+  height: 40vh;
+  background-color: #ffe6b3;
+  border: 1px solid black;
+}
+#jambeGauche, #jambeDroite{
+  height: 20vh;
+  background-color: #ffe6b3;
+  border: 1px solid black;
+}

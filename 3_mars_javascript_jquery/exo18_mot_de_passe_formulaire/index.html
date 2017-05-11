@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mot de passe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--POUR POUVOIR APPELER UNE FONCTION IL FAUT DECLARER LE CHEMIN DANS HEAD  -->
+    <script type="text/javascript" src="script.js">
+    </script>
+  </head>
+  <body>
+    <!--Exercice 18(exo9jp)  javascript :Exercice 10 :
+
+Demandez à l'internaute d'entrer un mot de passe qui doit contenir 8 caractères au minimum. Si le mot de passe fait moins de 8 caractères, écrire sur la page en rouge que le mot de passe a été rejeté. S'il fait plus de 8 caractères, écrire sur la page en vert qu'il a été accepté.
+   -->
+   <p>
+     <!-- Pour appeler la fonction lors de l'action submit: form>>>>>>onsubmit= "return mafonction()"-->
+     <form  method="post" onsubmit="return validation()">
+       <label for="motdepasse">Entrez votre mot de passe</label>
+       <!--TYPE PASSWORD  POUR CACHER LE MOT DE PASSE  -->
+      <input type="password" name="motdepasse" value="motdepasse" id=mypsswd>
+      <input type="submit"  value="Valider mot de passe">
+     </form>
+   </p>
+   <script>
+   function validation() {
+     var entree = document.getElementById('mypsswd').value;
+     var submitOK='true';
+     if (entree.length > 8) {
+        document.write('<p style="color:red;"> Le mot de passe a été rejeté</p>');
+        submitOK='false';
+    }
+    else if (entree.length<8 && entree.length!=0) {
+      document.write('<p style="color:green;"> Le mot de passe est correct</p>');
+      submitOK='true';
+    }
+
+}
+   </script>
+<!-- source résolution de cet exo W3SCHOOL
+<form action="tryjs_submitpage.htm" onsubmit="return myFunction()">
+  Name (max 10 characters): <input type="text" id="fname" size="20"><br>
+  Age (from 1 to 100): <input type="text" id="age" size="20"><br>
+  E-mail: <input type="text" id="email" size="20"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+    var at = document.getElementById("email").value.indexOf("@");
+    var age = document.getElementById("age").value;
+    var fname = document.getElementById("fname").value;
+    submitOK = "true";
+
+    if (fname.length > 10) {
+        alert("The name may have no more than 10 characters");
+        submitOK = "false";
+    }
+
+    if (isNaN(age) || age < 1 || age > 100) {
+        alert("The age must be a number between 1 and 100");
+        submitOK = "false";
+    }
+
+    if (at == -1) {
+        alert("Not a valid e-mail!");
+        submitOK = "false";
+    }
+
+    if (submitOK == "false") {
+        return false;
+    }
+}
+</script>  -->
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo5_bouton_aijouText</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+         var btn=$('#btn');
+         var info=$('.info');
+         btn.click(function() {
+          //  info.text('Mon 1er ajout');
+           info.html('Mon 1er ajout');
+         })
+      });
+    // RESOLU GRACE A: https://openclassrooms.com/courses/jquery-ecrivez-moins-pour-faire-plus/manipuler-le-contenu
+  </script>
+
+
+  </head>
+  <body>
+    <!--Exercice 22>exo5 jquery:
+
+    ##Exercice 5
+    Vous créez un bouton et deux paragraphes de classe "info" vides.
+    Lorsqu'on clique sur le bouton, vous ajoutez du texte dans chaque paragraphe grâce au script jQuery. Faites-le selon deux méthodes différentes.-->
+    <button id="btn" type="button" name="button">Ecrire</button>
+    <p class="info"></p>
+    <p class="info"></p>
+  </body>
+</html>

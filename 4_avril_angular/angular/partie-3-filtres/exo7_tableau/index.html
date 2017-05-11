@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr" ng-app="testApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice 7</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <!--
+    ## Exercice 7
+    Dans le fichier html fourni, trier le tableau par ordre alphabétique du modèle.
+ -->
+<body>
+<div ng-controller="phonesCtrl">
+  <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <thead>
+      <th>Modèle</th>
+      <th>Marque</th>
+    </thead>
+    <!-- comme la boucle for:
+    for (variable in objet) {...
+}
+    for (var prop in obj)
+    -->
+
+</ul>
+<!--element in tableau | orderBy : 'element'"
+http://angular.sillo.org
+ -->
+ <!-- Dans l'objet phones je crée une varialbe phone qui contient tous les enfants de phones
+ordrby pour filtrer les identifiants phoneModel de A à Z -->
+    <tr ng-repeat="phone in phones | orderBy :'phoneModel' ">
+      <td>
+        {{phone.phoneModel}}
+      </td>
+      <td>
+        {{phone.brand}}
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

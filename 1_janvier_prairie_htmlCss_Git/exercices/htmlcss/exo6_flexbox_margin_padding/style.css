@@ -1,0 +1,86 @@
+/*pour augmenter de la même valeur la taille il faut modifier L - l + radius*/
+#soleil{
+width: 150px;
+height: 150px;
+background: yellow;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border-radius: 100px;
+float-left;
+margin-left: 100px;
+margin-top: 40px;
+}
+
+#bodymaison{
+width: 250px;
+height: 400px;
+background: red;
+margin-top: none;
+margin-left: 600px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding-top: 40px;
+}
+
+.fenetre{
+width: 50px;
+height: 50px;
+background: yellow;
+margin-top: 40px;
+}
+
+#porte{
+  width: 50px;
+  height: 170px;
+  background-color: black;
+  margin-top: 50px;
+  margin-bottom: none;
+}
+
+#container{
+  width: 250px;
+  height: 160px;
+  justify-content: center;
+  margin-left: 600px;
+}
+#toiture5{
+ width: 100%;
+ height: 20%;
+ background-color: green;
+ justify-content: center;
+}
+#toiture4{
+  width: 80%;
+  height: 20%;
+  background-color: green;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#toiture3{
+  width: 60%;
+  height: 20%;
+  background-color: green;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#toiture2{
+  width: 50%;
+  height: 20%;
+  background-color: green;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#toiture1{
+  width: 30%;
+  height: 20%;
+  background-color: green;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+#line{
+  height: 6px;
+  width: auto;
+  background-color: green;
+}

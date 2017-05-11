@@ -1,0 +1,116 @@
+<!--
+Réalisez un formulaire d'inscription avec trois champs : pseudo, âge et email.
+- Vous réaliserez les contrôles suivant avant de pouvoir envoyer le formulaire :
+- le pseudo doit contenir entre 4 et 25 caractères.
+- l'âge doit être un nombre et supérieur à 18 ans.
+- l'email doit respecter le format d'un email. Pour cela, utilisez une expression régulière qui valide son format.
+
+Chaque contrôle donne lieu à l'affichage d'une croix à côté du champ correspondant s'il est faux, ou d'une coche s'il est juste.
+
+- Les contrôles s'effectuent deux fois : lors de la saisie dans les champs, et lorsque l'internaute valide le formulaire (rempli ou non).
+
+- L'envoi du formulaire doit être bloqué si l'un des contrôles est faux.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice JQuery 10</title>
+  <script src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+  <h3>Inscription</h3>
+  <div id="message"></div>
+  <form method="post" action="">
+    <label for="pseudo">Pseudo :</label><br>
+    <input type="text" id="pseudo"><span id="verifPseudo"></span><br>
+
+    <label for="age">Age :</label><br>
+    <input type="text" id="age"><span id="verifAge"></span><br>
+
+    <label for="email">Email :</label><br>
+    <input type="text" id="email"><span id="verifEmail"></span><br>
+
+    <input type="submit" value="Valider">
+  </form>
+
+  <script>
+  $(function(){
+    // Déclaration des 3 fonctions de contrôle :
+    function verifPseudo(){
+      // par convention la variable $champ prend un $ car on lui affecte un élément sélectionné.
+      var $champ = $("#pseudo");
+      // val() pour récupérer la valeur d'un input :
+      if ($champ.val().length < 4 || $champ.val().length > 25){
+        $("#verifPseudo").html("<img src='cross.png'>");
+        return false;
+      } else {
+        $("#verifPseudo").html("<img src='checked.png'>");
+        return true;
+      }
+    }
+    function verifAge(){
+      var $champ = $("#age");
+      if(isNaN($champ.val()) || $champ.val() < 18){
+        $("#verifAge").html("<img src='cross.png'>");
+        return false;
+      } else {
+        $("#verifAge").html("<img src='checked.png'>");
+        return true;
+      }
+    }
+
+    function verifEmail(){
+      var $champ = $("#email");
+
+      if (/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test($champ.val())){
+        // si l'email correspond à l'exp régulère :
+        $("#verifEmail").html("<img src='checked.png'>");
+        return true;
+      } else {
+          $("#verifEmail").html("<img src='cross.png'>");
+        return false;
+      }
+    }
+    // On appelle toutes les fonctions :
+    $("#pseudo").on('input', verifPseudo);
+    $("#age").on('input', verifAge);
+    $("#email").on('input', verifEmail);
+    // L'événement input se déclenche au changement de contenu du champ.
+
+    // On vérifie tous les champs quand on clique sur "valider" :
+    $("form").submit(function(){
+      var verifFinalPseudo = verifPseudo();
+      var verifFinalAge = verifAge();
+      var verifFinalEmail = verifEmail();
+
+      if (verifFinalEmail && verifFinalAge && verifFinalPseudo) {
+        return true;
+        // pour ne pas bloquer l'envoi du formulaire
+      } else {
+         return false;
+        //  pour bloquer l'envoi du formulaire
+      }
+    });
+
+  });
+  // Fin du document ready.
+  
+
+  // *Explication de l'expression régulière :
+  // /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/
+    //- on encadre une exp régulère par des /
+    // - ^ définit le début de l'expression
+    // -$ définit la fin de l'expression. Par conséquent, l'emploi combiné de ^ et $ signifie que l'exp régulière définit l'intégralité de ce qui est autorisé.
+    // - intervalle des lettres  de a à z (en minuscules), des chiffres de 0 à 9, et on autorise aussi le ".", le "_" et le "-"
+    // Le + est un quantificateur : il signifie que les caractères peuvent être présents plusieurs fois.
+    // - on trouve un @
+    // - on retrouve le même interval de lettres/chiffres qu'au dessus suivi du quantificateur "+" pour plusieurs fois.
+    // - on trouve le point de l'email qui doit être echappé avec \
+    // - interval des lettres de a à z
+    // - quantificateur {2,6} pour présentes de 2 à 6 fois max.
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="appCtrl">
+<head>
+	<title>CV Rkt Avotra</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+	<!--media screen c'est pour les media queries  -->
+	<link rel="stylesheet" media="screen and (max-width: 1280px)" href="css/petite_resolution.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<!-- DEBUT SCRIPT WOW et cacher navbar-collapse après click  -->
+	<script>
+	// pour activer wow animation
+	(function () {
+		new WOW().init();
+	})();
+// ou tout simplement new WOW().init();
+	// pour fermer le menu de l'icon bar après clic => éviter de scroller ++ dans un petit écran
+	$(document).ready(function () {
+		var navCollapse = $(".navbar-collapse");
+		navCollapse.on("click", "a", null, function () {
+				navCollapse.collapse('hide');
+		});
+	});
+	</script>
+	<!-- FIN SCRIPT WOW et cacher navbar-collapse après click  -->
+</head>
+<body>
+	<div class="container col-lg-offset-1 col-lg-10">
+			<div class="row"><!--Début ROW header-->
+				<header>
+				<div class="col-lg-5 wow slideInDown data-wow-duration="2s" data-wow-delay="1s" " id="identite">
+					<p class="nom_emploi">Avotra RAKOTOARISOA  </br> FRANCONVILLE 95130</p>
+					<p class="nom_emploi">Développeuse web Junior </br> full stack Javascript</p>
+				</div>
+
+				<div class="col-lg-2 photo_profil">
+					<img src="images/photo_profil.jpg" class="img-circle img-responsive wow rotateIn data-wow-iteration="infinite" data-wow-duration="15s"" alt="photo de profil">
+				</div>
+				<div class="col-lg-5 charger_cv wow slideInDown data-wow-duration="15s" data-wow-iteration-count="10"" style="text-align:right;">
+						<!-- <p id="charger_cv"><a href="docs/cv.pdf"><i class="fa fa-folder-open-o" aria-hidden="true" title="Télécharger mon cv en pdf" style="font-size: 6vh;"></i>Télécharger mon cv
+</a></p> -->
+						<div id=reseaux_sociaux style="margin-top:2vh;">
+							<a href="https://fr.linkedin.com/in/avotra-rakotoarisoa-2b838943" title="linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 6vh;"></i></a>
+							<a href="https://github.com/avotra68" title="github" target="_blank"><i class="fa fa-github" aria-hidden="true" style="font-size: 6vh;"></i></a>
+							<a href="https://twitter.com/avotra68"  title="twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="font-size: 6vh;"></i></a>
+         			<a href="mailto:avofeno@yahoo.fr" title="Cliquez ici si vous voulez m'envoyer-moi un mail" target="_blank">
+							<i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 6vh;"></i></a>
+							<a href="tel:07xxxxxxxx" title="Mon numéro téléphone" target="_blank">
+							 <i class="fa fa-phone" aria-hidden="true" style="font-size: 6vh;"></i></a>
+
+						</div>
+					</div>
+					</header>
+				</div> <!--#ROW-->
+
+			<!--FIN HEADER  -->
+			<!-- <div class="row">
+				<div class="banniere1">
+				</div>
+			</div> -->
+			<div class="row">
+				<nav class="navbar navbar-inverse  col-lg-12 " style="background-color:#000099;
+				border: 0.5vh solid #ccccff;color:white;">
+					<div class="container-fluid">
+					<!-- Bouton qui apparait lorsque ecran trop petit-->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+								 <span class="sr-only">Toggle navigation</span>
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+							</button>
+							<!-- / Bouton qui apparait lorsque ecran trop petit-->
+						</div>
+							<!-- /Bouton qui apparait lorsque ecran trop -->
+							<!--ICI on peut mettre un titre par exemple:
+		            <a class="navbar-brand" href="#"><img src="img/simplon_logo_50px.png" alt="Simplon">
+		                <span class="redSimplonColor">S</span>Simplon.co #
+		                <span class="redSimplonColor pouetFlou">SARCELLES</span>
+		            </a>  -->
+					<div id="navbar" class="navbar-collapse collapse"> <!-- Contenu du navbar -->
+						<ul class="nav navbar-nav wow pulse data-wow-duration="100s"">
+							<!-- On execute lors d'un clic les codes contenu dans la fontction competences() et ainsi de suite pour les autres boutons -->
+							<li  ng-click="competences()" id="btn1"><a href="#">Compétences</a></li>
+							<li ng-click="experiences()" id="btn2"><a href="#">Expériences</a></a></li>
+							<li ng-click="formations()" id="btn3"><a href="#">Formations</a></li>
+							<li  ng-click="centresInterets()" id="btn4"><a href="#">Centre d'intérêts</a></li>
+            </ul>
+					</div><!-- / Contenu du navbar -->
+				</div><!-- / container du navbar -->
+			</nav>
+		</div> <!-- / ROW navbar -->
+
+		<!-- AFFICHEUR -->
+
+			<div class="row"> <!-- ROW  POUR LE RESULTAT LORS D'un clic sur un onglet-->
+					<!--COMPETENCEScol-lg-offset-3   -->
+					<div class="col-lg-offset-1
+					 col-lg-10 afficheur container wow zoomIn data-wow-duration="15s"">
+						<!-- DEBUT COMPETENCES  -->
+						<div ng-show="ongletCompetences" id="competences" class="col-lg-12 onglets ">
+							<p class="One wow rubberBand data-wow-duration="15s"">COMPETENCES</p>
+							<p>Langages de programmation web et frameworks:</p>
+								 <div class="barre">
+										 <div id="html">
+											 <span class="langage">HTML5</span>
+											 <span class="pourcentage">80%</span>
+										 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="css">
+										 <span class="langage">CSS3</span>
+										 <span class="pourcentage">80%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="bootstrap">
+										 <span class="langage">BOOTSTRAP</span>
+										 <span class="pourcentage">80%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="js">
+										 <span class="langage">JAVASCRIPT</span>
+										 <span class="pourcentage">50%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="jQuery">
+										 <span class="langage">JQUERY</span>
+										 <span class="pourcentage">30%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="angular">
+										 <span class="langage">ANGULAR JS</span>
+										 <span class="pourcentage">30%</span>
+									 </div>
+								 </div>
+
+
+								 <p>Logiciels de version de code</p>
+								 <div class="barre">
+									 <div id="git">
+										 <span class="langage">GIT</span>
+										 <span class="pourcentage">50%</span>
+								 </div>
+								 </div>
+
+								 <div class="barre">
+									 <div id="github">
+										 <span class="langage">GITHUB</span>
+										 <span class="pourcentage ">50%</span>
+									 </div>
+								 </div>
+							 <p><strong>Editeurs de texte:</strong>Sublim text,Atom
+							 <p> <strong>Systèmes d'exploitations:</strong>Linux(Ubuntu),Windows</p>
+							 <p><strong> Logiciels de cartographie:</strong> ArcGis, Mapinfo</p>
+							 <p><strong>Logiciels de dessins Génie Civil:</strong>Autocad, Mensura, Covadis </p>
+							<p id="langues"><strong>Langues:</strong>&nbsp;&nbsp;
+								Français ==> courant &nbsp;&nbsp;&nbsp;&nbsp; Anglais  ==> Professionnelle
+							</p>
+
+						</div>
+						<!-- FIN COMPETENCES  -->
+						<!-- DEBUT EXPERIENCES -->
+					<div ng-show="ongletExperiences" id="experiences" class="col-lg-12 onglets wow zoomIn data-wow-duration="15s" ">
+						<p class="One wow rubberBand data-wow-duration="15s"">EXPERIENCES<p>
+						<dl class="dl-horizontal">
+				  		<dt>09/2013 au</br> 05/2016 </dt>
+				  		<dd>Aide Soignante au Centre Hospitalier de Châteauroux</dd>
+							<dd><strong>Description: </strong>Accompagnement des patients dans les actes de la vie quotidienne</dd>
+						</br></br>
+				  		<dt>02/2011 au</br> 06/2011</dt>
+				  		<dd>Stage de mémoire de fin d'études au Pôle image de l' Université de Paris 7-Denis Diderot</dd>
+							<dd><strong>Description: </strong>Suivi et évaluation de la désertification dans la région Nordeste du Brésil.
+							<ul>
+								<li>Création de  base de données géographique</li>
+								<li>Traitement et analyse des images 		satellites</li>
+							<li>Cartographie de changemenent</li>
+						</dd>
+						</br></br>
+				  	<dt>08/2009 au</br> 06/2010</dt>
+
+				  <dd>Géomètre topographe au sein de l'entreprise Keangnam-Ambatovy Power Plant à Madagascar</dd>
+					<dd><strong>Description: </strong>
+						<ul>
+							<li>Levé topographique</li>
+							<li>Implantation des bâtiments</li>
+							<li>Alignement  des poutres métalliques et pipeline</li>
+					</dd>
+				</dl>
+					</div>
+					<!-- FIN EXPERIENCES-->
+
+					<!-- DEBUT FORMATIONS -->
+					<div ng-show="ongletFormations" id="formations" class="col-lg-12 onglets wow zoomIn data-wow-duration="15s"">
+						<p class="One wow rubberBand data-wow-duration="15s"">FORMATIONS<p>
+						<dl class="dl-horizontal">
+				  		<dt>Année 2017</dt>
+				  		<dd>Développeur.se Full Stack Javascript (en cours)</dd>
+							<dd><strong>Centre de formation:</strong>SIMPLON.CO Sarcelles - Labellisée GRANDE ECOLE DU NUMERIQUE</dd>
+						</br></br>
+
+				  		<dt>Année 2016</dt>
+				  		<dd>un cycle d'exploration  de quatre semaines (du 21 novembre au 16 décembre) pour encourager les femmes intéressées par les métiers du numérique à poursuivre dans cette voie</dd>
+							<dd><strong>Centre de formation:</strong>SIMPLON.CO</span> Montreuil - Labellisée GRANDE ECOLE DU NUMERIQUE</dd>
+						</br></br>
+
+				  	<dt>2013/2014</dt>
+				  	<dd>Formation d'Aides Soignants à l'IFAS de Châteauroux</dd>
+						</br></br>
+
+						<dt>2010/2011</dt>
+				  	<dd>Master2 Géographie et Science des territoire</dd>
+						<dd>l'Université de Paris7-Denis Diderot
+								<strong>Spécialité</strong>: Environnement, Paysages, Milieux, Sociétés
+								<strong>Description</strong>:  appréhender la complexité des problèmes environnementaux</dd>
+						</br></br>
+
+				</dl>
+					</div>
+
+					<!-- FIN FORMATIONS -->
+
+					<!-- LCENTRES D'INTERETS -->
+					<div ng-show="ongletCentresInterets" id="centresInterets" class="col-lg-12 onglets wow zoomIn data-wow-duration="25s"">
+						<p class="One wow rubberBand data-wow-duration="15s"">CENTRES D'INTERETS<p>
+						<dl class="dl-horizontal">
+							<dt>Astronomie</dt>
+					  	<dd> j'aime l'astronomie parce qu'elle nous permet  de nous émerveiller et de comprendre la place que nous tenons face à l'immensité de l'univers.Pour moi, l'astronomie est devenue une passion.</dd>
+						</br></br>
+						<dt>Activité </br>culinaire</dt>
+						<dd>J’aime bien cuisiner. La cuisine nécessite un bon sens de l’organisation car il faut préparer un menu, gérer un budget, établir un planning pour que tout soit prêt à temps. Mais ce qui me plaît par-dessous tout, c’est de passer du temps à effectuer un travail de qualité, dans le but de satisfaire mon entourage. J’aime que l’on apprécie ma cuisine.</dd>
+
+				</dl>
+					</div>
+
+					<!-- FIN CENTRES INTRERETS -->
+
+					<!-- <div class="col-lg-offset-3 col-lg-6">
+								<h3>Twitter</h3>
+								<a class="twitter-timeline" data-width="220" data-height="200" data-theme="dark" data-link-color="#F5F8FA" href="https://twitter.com/girlshackweb">Tweets by girlshackweb</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div> -->
+	 	</div> <!-- FIN div afficheur col  -->
+
+ 	</div> <!--FIN div CLASS ROW RÉSULTAT CLIC SUR UN ONGLET-->
+	<!-- Affficher cacher div via Angular ___app.js fichier à part  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

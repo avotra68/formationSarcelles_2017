@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo3_showPasseword</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var check=$('#check');
+        var pass=$('#pass');
+        check.click(function(){
+          check.prop('checked') ? pass.attr('type', 'text') : pass.attr('type', 'password');
+          // prop>propriété attr>attribut
+      });
+    });
+    // if(check.prop('checked') {
+    //   pass.attr('type','text');
+    // }
+    // else {
+    //   pass.attr('type','password');
+    // }
+    // https://www.youtube.com/watch?v=WmYJjplTnCs
+  </script>
+
+
+
+
+    <!--POUR POUVOIR APPELER UNE FONCTION IL FAUT DECLARER LE CHEMIN DANS HEAD  -->
+  </head>
+  <body>
+    <!--Exercice 22>exo3 jquery:
+
+    ##Exercice 3
+
+    Vous créez 1 formulaire avec un input "mot de passe". Le mot de passe saisi doit être masqué. A côté de l'input, une mention "voir" permet d'afficher le mot de passe lorsqu'on enfonce la souris sur celle-ci, puis le mot de passe se masque quand on relâche la souris.
+-->
+
+  <label for="password">
+      <input id="pass" type="password" />
+  mot de passe</label></br>
+  <label for="checkbox">
+      <input type="checkbox" id="check">
+    Afficher mot de passe
+  </label>
+
+
+  </body>
+</html>

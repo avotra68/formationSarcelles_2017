@@ -1,0 +1,147 @@
+function question_1(){
+var quiz = parseInt(prompt("Question 1 : Quel préfixe utilise-t'on pour déclarer une variable ? Saisir le chiffre correspondant"+"\n"+"class = 1"+"\n"+"case = 2"+"\n"+"var = 3"));
+switch (quiz) {
+
+    case 1://si c'est la réponse 1
+
+        alert("Non! perdu !");//on affiche "perdu!"
+
+    break;//et on sort du switch ("break" casse le switch).
+
+
+    case 2:
+
+        alert("Dommage!");
+
+    break;
+
+
+    case 3:
+
+        alert("Super !!");
+
+    break;
+
+    default://sinon dans les autres cas
+
+        alert("Aie!!! Vérifiez votre saisie");
+  }
+}
+    function question_2(){
+      var quiz2 =parseInt(prompt("Sur quel version CSS travaille t'on actuellement?"+"\n"+"2 ?"+"\n"+"3 ?"+"\n"+"4 ?"));
+
+    switch (quiz2) {
+
+        case 2:
+
+            alert("Non! perdu !");
+
+        break;
+
+
+        case 3:
+
+            alert("Bien sûr !! Actuellement on travaille sur CSS3 !!");
+
+        break;
+
+
+        case 4:
+
+            alert("Pas encore....");
+
+        break;
+
+    default:
+
+        alert("Aie!!! Vérifiez votre saisie!!");
+
+      }
+}
+function question_3(){
+  var quiz3 =parseInt(prompt("Quel script fonctionne ?" + "\n" + "1 : function;" + "\n" + "2 : fonction()" + "\n" + "3 : function()"));
+
+switch (quiz3) {
+
+    case 1:
+
+        alert("Non! perdu !");
+
+    break;
+
+
+    case 2:
+
+        alert("non non");
+
+    break;
+
+
+    case 3:
+
+        alert("C'est ça !!");
+
+    break;
+    default:
+
+        alert("Aie!!! Vérifiez votre saisie !!");
+      }
+}
+function question_4(){
+  var quiz4 =parseInt(prompt("Comment initialise t'on une fonction ?" + "\n" + "1 : function;" + "\n" + "2 : fonction()" + "\n" + "3 : function()"));
+
+switch (quiz4) {
+
+    case 1:
+
+        alert("Non! perdu !");
+
+    break;
+
+
+    case 2:
+
+        alert("C'est presque ça !!");
+
+    break;
+
+
+    case 3:
+
+        alert("C'est ça !!");
+
+    break;
+    default:
+
+        alert("Aie!!! Vérifiez votre saisie !!");
+      }
+}
+function question_5(){
+  var quiz5 =(prompt("Quel évènement utilise t'on pour appeler une fonction au click ?" + "\n" + "-onload" + "\n" + "-onclick" + "\n" + "-onmouseover"));
+
+switch (quiz5) {
+
+    case "onload":
+
+        alert("Non ! perdu !");
+
+    break;
+
+
+    case "onmouseover":
+
+        alert("non non");
+
+    break;
+
+
+    case "onclick":
+
+        alert("C'est ça !!");
+
+    break;
+    default:
+
+        alert("Aie!!! Vérifiez votre saisie !!");
+      }
+}

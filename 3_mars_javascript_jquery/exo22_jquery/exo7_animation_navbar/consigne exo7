@@ -1,0 +1,3 @@
+Vous créez 1 menu de navigation avec des "sous-menus".
+
+Au survol, le menu déroulant apparaît en 200ms, affichant les sous-menus. Puis ils se replient lorsqu'on le quitte (effet hover)

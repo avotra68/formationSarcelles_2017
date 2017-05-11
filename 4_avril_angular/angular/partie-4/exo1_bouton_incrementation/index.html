@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <title>Exercice 1</title>
+</head>
+
+<body ng-app="">
+
+  <!-- # Exercices AngularJS - Partie 4 : Les directives
+  # Exercice 1
+  Faire une page HTML contenant un bouton + , un bouton - et un paragraphe. Au clic sur le bouton + incrémenter le chiffre présent dans le paragraphe de 1. Au clic sur le bouton - décrémenter le chiffre de 1.
+ -->
+    <div>
+      <button ng-click="count = count + 1" ng-init="count=1 ">+</button>
+      <button ng-click="count = count - 1" ng-init="count=1 ">-</button>
+      <p>
+        The value of count is  {{count}}
+      </p>
+      <p>This 2 buttons increases/decreases the value of the variable "nombre" every time you click the button+/-.</p>
+    </div>
+  </body>
+</html>

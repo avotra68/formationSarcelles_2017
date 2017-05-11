@@ -1,0 +1,3 @@
+Au clic sur un bouton "Faire apparaître" : un <div> de couleur apparaît en fondu en 1s, puis au bout d'1s disparaît en fondu en 1s.
+
+Dans un second temps, faites en sorte que le bouton disparaisse au début de l'animation, puis réapparaisse à la fin de l'animation.

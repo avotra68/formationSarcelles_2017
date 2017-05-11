@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>mon1er_exo_bootstrap</title>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row chapeau">
+      <div class="col-lg-offset-1 col-lg-10 col-sm-12 col-xs-12 chapeau1">1</div>
+      <div class="col-lg-12 col-sm-12 col-xs-12 chapeau2">2</div>
+    </div>
+    <div class="face"> <!-- conteneur visage PAS METTRE ROW DANS LE CONTENEUR -->
+        <div class="row front">
+          <div class="col-lg-10 col-sm-10 col-xs-10 front" style="height:50px;">
+          </div>
+        </div>
+        <div class="row yeux">
+            <!-- rehefa position objet 1 dia atao mitovy ny coordonnées offset et colonne -->
+            <div class="col-lg-offset-3 col-lg-1 col-sm-offset-3 col-sm-1 col-xs-offset-3 col-xs-1 oeilG">oG</div> <!-- décalge doit être identique pour lg sm xs ==>3 1 3 1 3 1==>quand on réduit ce sera proportionnel -->
+            <div class="col-lg-offset-4 col-lg-1 col-sm-offset-4 col-sm-1 col-xs-offset-4 col-xs-1 oeilD">oD</div><!-- décalge doit être identique pour lg sm xs ==>4 1 4 1 4 1==>quand on réduit ce sera proportionnel  -->
+        </div>
+        <div class="row espace_oeil_nez">
+        <!-- rehefa position objet 1 dia atao mitovy ny coordonnées offset et colonne -->
+          <div class="col-lg-10 col-sm-10 col-xs-10" style="height:100px;"></div>
+          <div class=" col-lg-offset-4 col-lg-4 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4  nez">6nez</div>
+        </div>   
+        <div class="row espace_nez_bouche">
+          <div class="col-lg-10 col-sm-10 col-xs-10" style="height:60px;"></div>
+        </div>
+        <div class="row bouche">
+          <div class="col-lg-offset-3 col-lg-1 hidden-sm hidden-xs bouche_droit bG"></div>
+          <div class="col-lg-offset-4 col-lg-1 hidden-sm hidden-xs bouche_droit bD"></div>
+          <div class="col-lg-offset-3 col-lg-6 col-sm-offset-4 col-sm-4 col-xs-offset-5 col-xs-2 bouche_milieu"></div>
+        </div> <!-- div class bouche fermé -->
+
+    </div> <!-- div class row visage fermé -->
+
+      <div class="row menton">
+        <div class="menton_bas col-lg-offset-3 col-lg-6 col-sm-12 col-xs-offset-1 col-xs-10" >4</div>
+      </div>
+  </div> <!-- div class container fermé -->
+</body>
+</html>

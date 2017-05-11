@@ -1,0 +1,1 @@
+Vous créez 1 formulaire avec un input "mot de passe". Le mot de passe saisi doit être masqué. A côté de l'input, une mention "voir" permet d'afficher le mot de passe lorsqu'on enfonce la souris sur celle-ci, puis le mot de passe se masque quand on relâche la souris.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>passage_souris_ouverture_boîtededialogue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--Exercice 16 (exo8jp)  javascript : Au passage de la souris sur un texte une fenêtre doit afficher un "Bonjour !"
+   -->
+<h3>Demonstration de la différence entre onmousemove, onmouseenter et onmouseover</h3>
+  <p id="pover">
+    <!-- onmouseover="javascript: alert('Bonjour');" -->
+    TEST ONMOUSEOVERipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <p id="penter" style="color:blue;">
+    <!-- onmouseenter="javascript: alert('Au revoir');" -->
+    TEST ONMOUSEENTER Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <p id="pmove" style="color:orange;">
+     <!-- onmousemove="javascript: alert('Bye Bye');" -->
+    TEST ONMOUSEMOVE Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <script type="text/javascript">
+  var element1 = document.getElementById('pover');
+   element1.onmouseover = function() {
+      element1.style.color='red';
+      alert("Bonjour !");
+}
+var element2 = document.getElementById('penter');
+ element2.onmouseenter = function() {
+    element2.style.color='red';
+    alert("Bye Bye !");
+}
+var element3 = document.getElementById('pmove');
+ element3.onmousemove = function() {
+    element3.style.color='red';
+    alert("tchao tchao !");
+}
+
+    // var para = document.getElementById('text_over');
+    //
+    // para.addEventListener('mouseover', function(){this.setAttribute('color', 'red')});
+    // para[1].addEventListener('mouseenter', function(){this.setAttribute('color', 'red')});
+    // para[2].addEventListener('mousemove', function(){this.setAttribute('color', 'red')});
+
+  </script>
+</body>
+</html>

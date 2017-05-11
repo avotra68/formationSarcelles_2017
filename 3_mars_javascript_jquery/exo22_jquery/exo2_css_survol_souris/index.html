@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo2_jquery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+              $('body').mouseover(function(){
+                  $('.contenu').css('color', 'red');});
+              $('body').mouseout(function(){
+                  $('.contenu').css('color', 'black');});
+  });
+    </script>
+
+    <!--POUR POUVOIR APPELER UNE FONCTION IL FAUT DECLARER LE CHEMIN DANS HEAD  -->
+  </head>
+  <body>
+    <!--Exercice 22>exo2 jquery:
+
+    ##Exercice 2
+
+    On vous impose les classes CSS .rouge et .bleu ainsi que le html.
+    Ajouter le jQuery qui permet de mettre en rouge le texte au survol (il redevient noir quand on le quitte), et qui permet de mettre ou retirer le background du texte en bleu quand on clique sur le bouton. Pour cela, trouver le moyen d'ajouter ou de retirer les classes prédéfinies en CSS.
+
+    Vous écrivez le script en jQuery.-->
+    <div class="contenu">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </body>
+</html>

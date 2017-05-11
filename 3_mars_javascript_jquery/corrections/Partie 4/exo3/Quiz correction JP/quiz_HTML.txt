@@ -1,0 +1,6 @@
+<h2>Quiz</h2>
+<button onclick=question_1() title="oneQuestion" class="button" alt="button";>question 1</button>
+<button onclick=question_2() title="twoQuestion" class="button" alt="button";>question 2</button>
+<button onclick=question_3() title="treeQuestion" class="button" alt="button";>question 3</button>
+<button onclick=question_4() title="fourQuestion" class="button" alt="button";>question 4</button>
+<button onclick=question_5() title="fiveQuestion" class="button" alt="button";>question 5</button>

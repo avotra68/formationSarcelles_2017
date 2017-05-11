@@ -1,0 +1,5 @@
+Vous créez un document HTML avec un bouton et un <div> dont le contenu texte n'est pas affiché à l'état initial. 
+
+Lorsqu'on clique sur le bouton, le contenu du <div> apparaît. 
+
+Vous écrivez le script en jQuery.

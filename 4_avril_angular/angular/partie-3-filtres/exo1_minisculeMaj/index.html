@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="testCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <!-- # Exercices AngularJS - Partie 3 : Les filtres
+  **Important : les variables sont déjà définies**
+  ## Exercice 1
+  Dans le fichier html fourni, convertir le texte de la variable **firstSentence** en majuscules et celui de **secondSentence** en minuscules.
+ -->
+ <!-- tuto
+  ***** Syntaxe
+ _utiliser la directive ng-bind. ex: < span ng-bind ="expression | nomDuFiltre ">
+
+  ***** filtres par défauts:
+    ==>currency: permets d'afficher un nombre au format monétaire
+    ==>date: formate l'affichage d'une date
+    ==>lowercase: affiche une chaîne de caractères en minuscule
+    ==>uppercase:affiche une chaîne de caractères en majuscule
+    ==>number: formate l'affichage d'un nombre (détermine le nombre décimale à afficher, espace des milliers)
+    ==>json: afficher un objet Javascript sous la forme d'une chaîne de caractères au format json
+  ***** On peut cumuler plusieurs filtres (ils s'exécutent les uns après les autres>de la gauche à droite)
+    Exemple:
+    entre 2 balises ouvrante et fermante:
+    <p> {{expression | nomDuFiltre : paramètre1 : paramètre2 : paramètre3.....etc.}} </p>
+
+*****Filtrer les mots quand l'utilisateur commence à taper les premiers mots d'une option, vous pouvez supprimer toutes les autres options du filtres
+    ==>il suffit d'utiliser la directive ng-repeat
+***** ANGULARS JS propose par défauts 3 filtres permettant de manipuler les listes:
+    ==>filter: récupère tous les élements répondant à un critère
+    ==>limiteTo: récupère seulement n premiers élements de votre liste. Si vous avez une liste avec 200 éléments autant limiter l'affichage à 10 20 ou 50
+    ==>orderBy: permet d'organiser la lister selon un critère
+
+  -->
+  <!-- # Exercices AngularJS - Partie 3 : Les filtres
+  **Important : les variables sont déjà définies**
+  ## Exercice 1
+  Dans le fichier html fourni, convertir le texte de la variable **firstSentence** en majuscules et celui de **secondSentence** en minuscules.
+ -->
+  <body>
+    <div>
+      <p>{{firstSentence | uppercase}}</p>
+      <p>{{firstSentence | lowercase}}</p>
+
+    </div>
+  </body>
+</html>

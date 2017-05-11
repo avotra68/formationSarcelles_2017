@@ -1,0 +1,43 @@
+
+    function nb_aleatoire(min, max)
+    
+    {
+    //renvoie un nombre entier choisi aléatoirement entre min et max
+         var nb = (max-min) * Math.random();
+    //renvoie le plus grand entier inférieur ou égal à la valeur passée en argument.
+         return Math.floor(nb);
+    
+    }
+    var nb = nb_aleatoire(1, 100);  // nb a deviner
+    
+    var cpt = 0;    // nb de coups
+    
+    var saisie;
+    
+    var msg = 'Le nombre à deviner est compris entre 1 et 100.';
+    
+    
+    do
+    
+    {
+    
+         saisie = prompt(msg);
+    
+         cpt++;
+    
+         // message a afficher au prochain tour :
+    
+         if(saisie > nb)
+    
+              msg = "C'est moins";
+    
+         else
+    
+              msg = "C'est plus";
+    
+    }
+    
+    while(saisie != nb);
+    
+    
+    alert("Bravo, tu as gagné en " + cpt + " coups ! bien joué!");

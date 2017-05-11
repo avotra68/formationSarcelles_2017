@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV Rkt Avotra</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			(function($){
+    $(document).ready(function(){
+        var offset = $(".navbar").offset().top;
+        $(document).scroll(function(){
+            var scrollTop = $(document).scrollTop();
+            if(scrollTop > offset){
+                $(".navbar").css("position", "fixed");
+            }
+            else {
+                $(".navbar").css("position", "static");
+            }
+        });
+    });
+})(jQuery);
+
+
+
+		});
+
+</script>
+</head>
+<body>
+	<div class="container col-lg-offset-1 col-lg-10">
+
+		<header>
+			<div class="row"><!--Début ROW header-->
+				<div class="col-lg-8 nom_emploi">
+					<p>Avotra RAKOTOARISOA </br> Franconville 95130</p>
+					<p>Développeuse web/full stack Javascript</p>
+				</div>
+				<div class="col-lg-4 charger_cv" style="text-align:right;">
+						<p id="charger_cv"><a href="docs/cv.pdf"><i class="fa fa-folder-open-o" aria-hidden="true" title="Télécharger mon cv en pdf" style="font-size: 40px;"></i>Télécharger mon cv
+</a></p>
+						<div id=reseaux_sociaux>
+							<a href="https://fr.linkedin.com/in/avotra-rakotoarisoa-2b838943" title="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 50px;"></i></a>
+							<a href="https://github.com/avotra68" title="github"><i class="fa fa-github" aria-hidden="true" style="font-size: 50px;"></i></a>
+							<a href="https://twitter.com/avotra68"  title="twitter"><i class="fa fa-twitter" aria-hidden="true" style="font-size: 50px;"></i></a>
+         			<a href="mailto:avofeno@yahoo.fr" title="Cliquez ici si vous voulez m'envoyer-moi un mail">
+							<i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 50px;"></i></a>
+							<a href="tel:0787210xxx" title="Mon numéro téléphone">
+							 <i class="fa fa-phone" aria-hidden="true" style="font-size: 50px;"></i></a>
+
+						</div>
+					</div>
+				</div> <!--#ROW-->
+				<div class="row">
+					<div class="col-lg-12 banniere1">
+						<div class="row">
+							<div class="col-lg-offset-5 col-lg-2 photo_profil">
+								<img src="images/photo_profil.jpg" class="img-circle img-responsive" alt="photo de profil">
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--FIN HEADER  -->
+			<div class="row">
+				<nav class="navbar navbar-inverse navbar-static-top col-lg-12" style="background-color:#000099;
+				border: 0.5vh solid #ccccff;color:white;">
+					<div class="container-fluid">
+					<!-- Bouton qui apparait lorsque ecran trop petit-->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+								 <span class="sr-only">Toggle navigation</span>
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+								 <span class="icon-bar"></span>
+							</button>
+							<!-- / Bouton qui apparait lorsque ecran trop petit-->
+						</div>
+							<!-- /Bouton qui apparait lorsque ecran trop -->
+							<!--ICI on peut mettre un titre par exemple:
+		            <a class="navbar-brand" href="#"><img src="img/simplon_logo_50px.png" alt="Simplon">
+		                <span class="redSimplonColor">S</span>Simplon.co #
+		                <span class="redSimplonColor pouetFlou">SARCELLES</span>
+		            </a>  -->
+					<div id="navbar" class="navbar-collapse collapse"> <!-- Contenu du navbar -->
+						<ul class="nav navbar-nav">
+							<li><a href="#competences" id="btn1" >Compétences</a></li>
+							<li><a href="#formations" id="btn2">Formations</a></li>
+							<li><a href="#experiences" id="btn3">Expériences</a></li>
+							<li><a href="#projets" id="btn4">Projets</a></li>
+            </ul>
+					</div><!-- / Contenu du navbar -->
+				</div><!-- / container du navbar -->
+			</nav>
+		</div> <!-- / ROW navbar -->
+		<!-- AFFICHEUR -->
+
+			<div class="row"> <!-- RANGER POUR LE RESULTAT LORS D'un clic sur un onglet-->
+					<!--COMPETENCEScol-lg-offset-3   -->
+					<div class="col-lg-offset-1
+					 col-lg-10 afficheur container">
+						<!-- DEBUT COMPETENCES  -->
+						<div id="competences" class="col-lg-12 onglets">
+							<p class="One">COMPETENCES</p>
+							<p>Langages de programmation web et frameworks:</p>
+								 <div class="barre">
+										 <div id="html">
+											 <span class="langage">HTML5</span>
+											 <span class="pourcentage">80%</span>
+										 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="css">
+										 <span class="langage">CSS3</span>
+										 <span class="pourcentage">80%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="js">
+										 <span class="langage">JAVASCRIPT</span>
+										 <span class="pourcentage">50%</span>
+									 </div>
+								 </div>
+								 <div class="barre">
+									 <div id="bootstrap">
+										 <span class="langage">BOOTSTRAP</span>
+										 <span class="pourcentage">50%</span>
+									 </div>
+								 </div>
+
+								 <p>Logiciels de version de code</p>
+								 <div class="barre">
+									 <div id="git">
+										 <span class="langage">GIT</span>
+										 <span class="pourcentage">50%</span>
+								 </div>
+								 </div>
+
+								 <div class="barre">
+									 <div id="github">
+										 <span class="langage">GITHUB</span>
+										 <span class="pourcentage ">50%</span>
+									 </div>
+								 </div>
+							 <p>Editeurs de texte:</p>
+								 <ul class="haiko">
+									 <li>Sublim text</li>
+									 <li>Atom</li>
+								 </ul>
+
+							 <p>Systèmes d'exploitations:</p>
+							 <ul class="haiko">
+								 <li>Linux(Ubuntu)</li>
+								 <li>Windows</li>
+							 </ul>
+
+							 <p> Logiciels de cartographie: </p>
+							 <ul class="haiko">
+								 <li>ArcGis, Mapinfo</li>
+							 </ul>
+							 <p>Logiciels de dessins Génie Civil:</p>
+							 <ul class="haiko">
+								 <li>Autocad, Mensura, Covadis</li>
+						</div>
+						<!-- FIN COMPETENCES  -->
+
+					<div id="experiences" class="col-lg-12 onglets">
+						<p class="One">EXPERIENCES<p>
+						<dl class="dl-horizontal">
+				  		<dt>09/2013 au</br> 05/2016 </dt>
+				  		<dd>Aide Soignante au Centre Hospitalier de Châteauroux</dd>
+							<dd><strong>Description:</strong>Accompagnement des patients dans les actes de la vie quotidienne</dd>
+						</br></br>
+				  		<dt>02/2011 au</br> 06/2011</dt>
+				  		<dd>Stage de mémoire de fin d'études au Pôle image de l' Université de Paris 7-Denis Diderot</dd>
+							<dd><strong>Description:</strong>Suivi et évaluation de la désertification dans la région Nordeste du Brésil.
+							<ul>
+								<li>Création de  base de données géographique</li>
+								<li>Traitement et analyse des images 		satellites</li>
+							<li>Cartographie de changemenent</li>
+						</dd>
+						</br></br>
+				  	<dt>08/2009 au</br> 06/2010</dt>
+
+				  <dd>Géomètre topographe au sein de l'entreprise Keangnam-Ambatovy Power Plant à Madagascar</dd>
+					<dd><strong>Description:</strong>
+						<ul>
+							<li>Levé topographique</li>
+							<li>Implantation des bâtiments</li>
+							<li>Alignement  des poutres métalliques et pipeline</li>
+					</dd>
+				</dl>
+					</div>
+					<!-- FIN EXPERIENCES-->
+
+					<!-- DEBUT FORMATIONS -->
+					<div id="formations" class="col-lg-12 onglets">
+						<p class="One">FORMATIONS<p>
+						<dl class="dl-horizontal">
+				  		<dt>Année 2017</dt>
+				  		<dd>Développeur.se Full Stack Javascript (en cours)</dd>
+							<dd><strong>Centre de formation:</strong>SIMPLON.CO Sarcelles - Labellisée GRANDE ECOLE DU NUMERIQUE</dd>
+						</br></br>
+
+				  		<dt>Année 2016</dt>
+				  		<dd>un cycle d'exploration  de quatre semaines (du 21 novembre au 16 décembre) pour encourager les femmes intéressées par les métiers du numérique à poursuivre dans cette voie</dd>
+							<dd><strong>Centre de formation:</strong>SIMPLON.CO</span> Montreuil - Labellisée GRANDE ECOLE DU NUMERIQUE</dd>
+						</br></br>
+
+				  	<dt>2013/2014</dt>
+				  	<dd>Formation d'Aides Soignants à l'IFAS de Châteauroux</dd>
+						</br></br>
+
+						<dt>2010/2011</dt>
+				  	<dd>Master2 Géographie et Science des territoire</dd>
+						<dd>l'Université de Paris7-Denis Diderot
+<strong>Spécialité</strong>: Environnement, Paysages, Milieux, Sociétés
+<strong>Description</strong>:  appréhender la complexité des problèmes environnementaux</dd>
+						</br></br>
+
+				</dl>
+					</div>
+
+					<!-- FIN FORMATIONS -->
+
+	 	</div> <!-- FIN div afficheur col  -->
+		<!-- <div class="col-lg-offset-3 col-lg-6">
+					<h3>Twitter</h3>
+					<a class="twitter-timeline" data-width="220" data-height="200" data-theme="dark" data-link-color="#F5F8FA" href="https://twitter.com/girlshackweb">Tweets by girlshackweb</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div> -->
+
+ 	</div> <!--FIN div CLASS ROW RÉSULTAT CLIC SUR UN ONGLET-->
+
+</body>
+</html>

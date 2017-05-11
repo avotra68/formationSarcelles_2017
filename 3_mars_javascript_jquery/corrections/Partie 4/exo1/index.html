@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1 conditions JS </title>
+  </head>
+  <body>
+
+
+    <script>
+
+  /*  var tonAge;
+    function age(){
+      tonAge = prompt('Entrez votre âge');
+    }
+
+    function verfif(ageFonction){
+    if(ageFonction >= 18){
+      alert("tu peux louer un film tu as plus de 18ans");
+    }
+
+    else if(ageFonction == 12){
+      alert("tu peux louer un film mais tu as moins de 18 ans");
+    }
+
+    }
+    age();
+    verif(tonAge);*/
+
+
+var age = prompt("Quel est votre âge?");
+
+if (age<12){
+  alert("vous ne pouvez pas louer de vidéo");
+} else if (age<18){
+  msg12();
+} else {
+  msg18();
+}
+//variable déclarée à l'intérieur de la fonction//
+function msg12() {
+  var txt ="Vous ne pouvez louer que dans la catégorie moins de 18ans";
+  return alert(txt);
+  }
+
+function msg18(){
+  var txt ="vous ne pouvez n'importe quelle vidéo";
+  return alert(txt);
+}
+
+</script>
+
+</body>
+</html>

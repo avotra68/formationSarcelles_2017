@@ -1,0 +1,101 @@
+.hover:hover
+{
+transition: 0.7s;
+filter: brightness(50%);
+}
+
+.image1{
+background-image: url("images/image1.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image2{
+  background-image: url("images/image2.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-right: -85px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image3{
+  background-image: url("images/image3.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image4{
+  background-image: url("images/image4.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image5{
+  background-image: url("images/image5.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-right: -85px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image6{
+  background-image: url("images/image6.jpeg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.icon1{
+display:none;
+cursor: pointer;
+}
+.icon2{
+display:none;
+cursor: pointer;
+}
+.icon3{
+display:none;
+cursor: pointer;
+}
+.icon4{
+display:none;
+cursor: pointer;
+}
+.icon5{
+display:none;
+cursor: pointer;
+}
+.icon6{
+display:none;
+cursor: pointer;
+}
+
+a{
+  color: black;
+}
+a:hover{
+color: black;
+}

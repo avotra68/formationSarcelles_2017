@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="testCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <!-- # Exercice 6
+Faire une page HTML contenant deux paragrahes et deux boutons. Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic sur le bouton deux, seulement le paragrahe 2 doit aparaître.
+ -->
+  <body>
+    <h3>Les directives Ng-show et ng-hide</h3>
+
+    <div>
+      <button ng-click="afficherParagraphe1()">AfficherP1</button>
+      <button ng-click="afficherParagraphe2()">AfficherP2</button>
+      <p ng-show="message1" style="margin-top: 20px; padding:10px; color:blue; fontsize: 10px; height: 40px; width: 200px; border: 2px solid blue"> Voilà mon P1 est  affiché</p>
+
+      <p ng-show="message2" style="margin-top: 20px; padding:10px; color:red; fontsize: 10px; height: 40px; width: 200px; border: 2px solid red"> Voilà mon P2 est  affiché</p>
+
+    </div>
+  </body>
+</html>

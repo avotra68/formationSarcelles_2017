@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>boucle2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--POUR POUVOIR APPELER UNE FONCTION IL FAUT DECLARER LE CHEMIN DANS HEAD  -->
+    <script type="text/javascript" src="script.js">
+    </script>
+  </head>
+  <body>
+    <!--Exercice 20(exo2 boucle jp)  javascript :
+
+    Exercice 1
+
+    En utilisant les boucles, réaliser un jeux qui doit faire deviner un nombre aléatoire entre 1 et 100. Afficher le résultat.-->
+
+   <script>
+   var i=Math.floor((Math.random() * 100) + 1);
+   var j=prompt('entrer un nombre pour voir sil est vrai');
+   while(i != parseInt(j)){
+    prompt('réessayer');
+   }
+
+
+//    for (var i=1; i<100; i++) {
+//
+//   alert(Math.round(Math.random()*i)) ;
+// }
+// http://www.tayo.fr/math.random-javascript--trouver-un-nombre-aleatoire-aide.php
+   </script>
+
+  </body>
+</html>

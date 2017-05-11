@@ -1,0 +1,118 @@
+<!--
+Vous allez réaliser un slider à partir du HTML donné.
+    -> Les images défilent toutes les 3 secondes et à l'infini.
+
+Dans un second temps, vous développez la fonctionnalité de pause : lorsqu'on clique sur l'image, le slider se met en pause s'il tourne, sinon il redémarre.
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta charset="UTF-8">
+        <title>Slider</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            body {
+                background: #12121C;
+            }
+            .slider {
+                position: relative;
+                width: 45vw;
+                height: 30vw;
+				margin: 0 auto;
+                margin-top: 50vh;
+                transform: translateY(-50%);
+				border: 10px solid #fff;
+                border-radius: 5px;
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+            }
+            img {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+            img:first-of-type {
+                display: block;
+            }
+
+        </style>
+        <script src="jquery.js"></script>
+    </head>
+<body>
+    <div class="slider">
+
+        <img src="a.jpg" alt="">  <!--  indice 0 display block-->
+        <img src="b.jpg" alt="">  <!--  indice 1 display none-->
+        <img src="c.jpg" alt="">  <!--  indice 2 display none-->
+        <img src="d.jpg" alt="">  <!--  indice 3 display none-->
+
+    </div>
+
+
+
+    <script>
+    /* 3 FONCTIONS IMPORTANTES GESTION DE TEMPS JS:
+    settimeout appel une fois au bout d'un certain temps
+    setInterval appel la fonction tous les x milliseconde, de manière indéfinie
+    clearInterval pour arrêter l'interval*/
+    $(document).ready(function () {
+      // initialisation des variables :
+      var indice=1; //représente de l'image
+      var tourne=true; //indique que le slider tourne
+      // var nbImage = $('img').length   ==>Calcul automatiquement le nombre d'image
+      // indice ==nbImage
+
+      //Déclaration d'une fonction d'affichage des images
+
+      function affiche() {
+        if(indice == 4){
+          indice = 0;
+          $('img').hide();
+
+        }
+
+        // Affiche l'image
+        $('img').eq(indice).show();
+        indice++; //incrémentation (+1)
+      };
+      // fonction pour la pause :
+
+        $('img').click(function () {
+          if(tourne){ //si le slider tourne
+            clearInterval(timer);
+            tourne = false //indique que le slider est à l'arrêt
+          }
+          else {
+            affiche();
+            timer=setInterval(affiche, 3000);
+            tourne = true;
+
+          }
+        });
+
+      var timer=setInterval(affiche, 3000); //appel la fonction affiche() toutes les 3s, Affiche c'est un call back =>pas mettre ()
+
+
+
+      // function startSlider() {
+      //     interval = setInterval(function () {
+      //     $('.slider').find('img').animate({'margin-left':'-='+width}, animationSpeed, for(var i=1;i=== $slider.length;i++){
+      //         $sliderContainer.find('img')css('margin-left', 0);  }
+      //     });
+      //
+      //   }, pause );
+      // }
+      // function stopSlider() {
+      //   clearInterval(interval);
+      //
+      // }
+      // $slider.on('mouseenter, stopSlider').on('mouseleave',startSlider);
+
+    }); //fin DOC Ready
+    </script>
+</body>
+
+</html>

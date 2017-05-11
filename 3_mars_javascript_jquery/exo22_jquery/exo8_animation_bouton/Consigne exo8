@@ -1,0 +1,9 @@
+Vous créez 4 boutons pour animer 4 <div> carrés.
+
+Animation 1 : monter de 200px. Ne marche qu'une fois.
+
+Animation 2 : partir en diagonale haut-droite de 200px. Ne marque qu'une fois.
+
+Animation 3 : partir en diagonale bas-droite de 100px puis en diagonale haut-droite de 100px. A chaque clic, le carré continue son déplacement.
+
+Animation 4 : partir à droite de 400px puis revenir à gauche. L'animation continue indéfiniment.

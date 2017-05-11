@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animations_bonhomme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="allBody" class="col-lg-12">
+          <div id="tete" class="col-lg-offset-4 col-lg-4">
+          <div id="yeux" class= "col-lg-12">
+            <div id="yeuxGauche" class="col-lg-offset-1 col-lg-3">
+              <div id="pupilleGauche" class="pupille col-lg-offset-1 col-lg-1">
+              </div>
+            </div>
+            <div id="yeuxDroite" class="col-lg-offset-4 col-lg-3">
+              <div id="pupilleDroite" class="pupille col-lg-offset-1 col-lg-1">
+              </div>
+            </div>
+          </div> <!--FIN div id yeux-->
+
+          <div id="nez" class="col-lg-offset-5 col-lg-2">
+          </div>
+          <div id="bouche" class="col-lg-offset-4 col-lg-4">
+            <div class="levre" class="col-lg-12">
+            </div>
+            <div class="levre" class="col-lg-12">
+            </div>
+          </div>
+        </div> <!--FIN div id tête-->
+        <div id="gorge" class="col-lg-offset-5 col-lg-2">
+        </div>
+      </div> <!--FIN row pour TETE & GORGE-->
+      <div class="row">
+        <div id="brasGauche" class="col-lg-2">
+        </div>
+        <div id="corps" class="col-lg-8">
+        </div>
+        <div id="brasDroite" class="col-lg-2">
+        </div>
+        <div id="jambeGauche" class="col-lg-offset-3 col-lg-2">
+        </div>
+        <div id="jambeDroite" class="col-lg-offset-2 col col-lg-2">
+        </div>
+      </div> <!--FIN row pour CORPS & JAMBES-->
+
+    </div> <!--FIN div id allBody-->
+
+    </div> <!--FIN div class container-->
+
+    <script type="text/javascript">
+      var vYeuxGauche = document.getElementById('yeuxGauche');
+      vYeuxGauche.addEventListener('click',monterDescendre);
+
+      var vBrasGauche = document.getElementById('brasGauche');
+      vBrasGauche.addEventListener('click',decalerGD);
+
+      var vBrasDroite = document.getElementById('brasDroite');
+      vBrasDroite.addEventListener('click',decalerDG);
+
+
+      var vJambeGauche = document.getElementById('jambeGauche');
+      vJambeGauche.addEventListener('click',rallonger);
+
+      var vJambeDroite = document.getElementById('jambeDroite');
+      vJambeDroite.addEventListener('click',rallonger);
+
+      var vBouche = document.getElementsById('bouche');
+      vBouche.addEventListener('click',sourire);
+
+
+
+      function monterDescendre(e) {
+        var robotPart = e.target;
+        var pos = 0;
+        var id = setInterval(frame, 10); // toutes les 10 millisecondes
+        function frame() {
+          robotPart.style.width = pos + '%';
+          pos++;
+          if (pos === 20){
+            return pos = 0;
+            clearInterval(id);
+          }
+        }
+
+      }
+      function decalerGD(e) {
+        var robotPart = e.target;
+        var gauche = 0;
+        var id = setInterval(frame, 100); // toutes les 10 millisecondes
+        function frame() {
+          robotPart.style.left = gauche + '%';
+          gauche++;
+          if (gauche === 20){
+            return gauche = 0;
+            clearInterval(id);
+          }
+        }
+      }
+      function decalerDG(e) {
+        var robotPart = e.target;
+        var right = 0;
+        var id = setInterval(frame, 100); // toutes les 10 millisecondes
+        function frame() {
+          robotPart.style.right = right + '%';
+          right++;
+          if (right === 20){
+            return right = 0;
+            clearInterval(id);
+          }
+        }
+      }
+
+        function rallonger(e) {
+          var robotPart = e.target;
+          var rallonge = 0;
+          var id = setInterval(frame, 100); // toutes les 10 millisecondes
+          function frame() {
+            robotPart.style.height = rallonge + 'vh';
+            rallonge ++;
+            if (rallonge === 20){
+              return rallonge = 0;
+              clearInterval(id);
+            }
+          }
+        }
+        function sourire(e) {
+          var robotPart = e.target;
+          var pos = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 350) {
+            clearInterval(id);
+            } else {
+            pos++;
+            robotPart.style.height = pos + 'vh';
+          }
+        }
+    }
+
+    </script>
+  </body>
+</html>

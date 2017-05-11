@@ -1,0 +1,121 @@
+<!--
+Vous allez réaliser un slider à partir du HTML donné.
+    -> Les images défilent toutes les 3 secondes et à l'infini.
+Dans un second temps, vous développez la fonctionnalité de pause : lorsqu'on clique sur l'image, le slider se met en pause s'il tourne, sinon il redémarre.
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+        <meta charset="UTF-8">
+        <title>Exercice JQuery 11</title>
+        <style>
+            body {
+                background: #12121C;
+            }
+
+            .slider {
+                position: relative;
+                width: 45vw;
+                height: 30vw;
+				margin: 0 auto;
+                margin-top: 50vh;
+                transform: translateY(-50%);
+				border: 10px solid #fff;
+                border-radius: 5px;
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+            }
+
+            img {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            img:first-of-type {
+                display: block;
+            }
+
+
+        </style>
+
+        <script src="jquery-3.2.0.min.js"></script>
+    </head>
+
+<body>
+    <div class="slider">
+        <img src="galerie/foret1.jpg" alt="">  <!--  indice 0 -->
+        <img src="galerie/foret2.jpg"  alt="">  <!--  indice 1 -->
+        <img src="galerie/foret3.jpg"  alt="">  <!--  indice 2 -->
+        <img src="galerie/foret4.jpg"  alt="">  <!--  indice 3 -->
+    </div>
+
+    <script>
+     $(function(){
+      //  Initialisation des variables :
+
+      // représente l'indice de l'image
+      var indice = 1;
+      //indique que le slider tourne
+      var tourne = true;
+      // propriété qui indique le nombre d'éléments sélectionnés, ici 4 images
+      // var nbImage = $("img").length;
+
+
+      // Déclaration d'une fonction d'affichage des images :
+      function affiche(){
+      // if(indice == nbImage) une autre solution avec nbImage.
+        if(indice == 4) {
+          indice = 0;
+          $("img").hide();
+        }
+
+        // Affiche l'image :
+        $("img").eq(indice).show();
+
+        // incrémentation (+1)
+        indice++;
+      }
+
+      // fonction pour la pause :
+      $("img").click(function(){
+         if(tourne){
+          //  on arrête le setInterval
+           clearInterval(timer);
+          //  indique que le slider est à l'arrêt
+           tourne = false;
+         } else{
+          //  pour relancer immédiatement le slider
+            affiche();
+          //  on relance l'appel de la fonction affiche() toutes les 3s
+            timer = setInterval(affiche, 3000);
+            // on indique que le slider est en marche
+            tourne = true;
+         }
+
+      });
+
+      // Appel de la fonction affiche() :
+
+      // appel la fonction affiche() toutes les 3s
+      var timer = setInterval(affiche, 3000);
+
+
+      //  setInterval(function(){
+      //    $(".slider").animate({marginLeft:350},800,function(){
+      //       $(this).css({marginLeft:350}).find("img:last").after($(this).find("img:first"));
+      //    })
+      // }, 3000);
+    });
+    // Fin du document ready
+
+
+
+    // var timer = setInterval(fonction,3000)
+    // setTimeout(fonction,2000)
+    // clearInterval(timer)
+    </script>
+
+</body>
+</html>

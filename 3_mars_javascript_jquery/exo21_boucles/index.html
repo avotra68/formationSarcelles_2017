@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>boucle_SWITCH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--POUR POUVOIR APPELER UNE FONCTION IL FAUT DECLARER LE CHEMIN DANS HEAD  -->
+  </head>
+  <body>
+    <!--Exercice 21(exo3 boucle jp)  javascript :
+
+    ##Exercice 3
+
+Avec "switch" réaliser un quiz de 5 questions minimum et 3 réponses possibles minimum. Afficher si la réponse est bonne ou mauvaise-->
+
+   <script>
+
+   for (var outils1= '',outils2= '',outils3= '',outils4= '',outils5= ''; true;) {
+
+     outils1=prompt('Dans la cuisine quel est l\'outils N°1 qu\'il faut avoir?(Exemples: BOUILLOIRD,POILE,CUISINIERE,CASSEROLE,MICRO_ONDE,ect.)').toUpperCase();
+     switch (outils1) {
+            case 'CUISINIERE': alert('bonne réponse');
+            break;
+            default:
+            alert('Mauvaise réponse');
+     }
+     outils2=prompt('Dans la cuisine quel est l\'outils N°2 qu\'il faut avoir?(Exemples: BOUILLOIRD,POILE,CUISINIERE,CASSEROLE,MICRO_ONDE,ect.)').toUpperCase();
+     switch (outils2) {
+            case 'CASSEROLE': alert('bonne réponse');
+            break;
+            default:
+            alert('Mauvaise réponse');
+     }
+     outils3=prompt('Dans la cuisine quel est l\'outils N°3 qu\'il faut avoir?(Exemples: BOUILLOIRD,POILE,CUISINIERE,CASSEROLE,MICRO_ONDE,ect.)').toUpperCase();
+     switch (outils3) {
+            case 'BOUILLOIRD': alert('bonne réponse');
+            break;
+            default:
+            alert('Mauvaise réponse');
+     }
+      outils4=prompt('Dans la cuisine quel est l\'outils N°4 qu\'il faut avoir?(Exemples: BOUILLOIRD,POILE,CUISINIERE,CASSEROLE,MICRO_ONDE,ect.)').toUpperCase();
+      switch (outils4) {
+     case 'MICRO_ONDE': alert('bonne réponse');
+     break;
+     default:
+     alert('Mauvaise réponse');
+      }
+     outils5=prompt('Dans la cuisine quel est l\'outils N°5 qu\'il faut avoir?(Exemples: BOUILLOIRD,POILE,CUISINIERE,CASSEROLE,MICRO_ONDE,ect.)').toUpperCase();
+     switch (outils5) {
+     case 'POILE': alert('bonne réponse');
+     break;
+     default:
+     alert('Mauvaise réponse');
+      }
+    }
+
+
+   </script>
+
+  </body>
+</html>

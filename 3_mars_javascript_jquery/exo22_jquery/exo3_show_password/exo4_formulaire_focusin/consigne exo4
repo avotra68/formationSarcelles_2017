@@ -1,0 +1,1 @@
+Vous créez un formulaire avec un input "pseudo" est un input "mdp". Lorsqu'on clique sur l'un des champs, sa bordure devient verte et de 2px d'épaisseur, quand on le quitte il reprend sa forme initiale.

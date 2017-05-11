@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Exercices Javascript/correction</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+
+
+  //Écrire un script qui permet de saisir le nom de l’utilisateur et de l’afficher en gras dans une page Web. 
+
+  var name = prompt('Quel est votre nom ?');
+  document.write('<p>Votre nom est <strong>'+name+'</strong>.</p>');
+
+//====================================================================================
+
+  //Demander à l'internaute de renseigner son prénom, qui apparaîtra sur sa page web entouré en bleu. 
+
+  function prenomBlue() {
+    var name = prompt('Quel est votre nom ?');
+    document.write('<span style="border:1px solid blue;font-weight:bold;">' + name + '</span>');
+  }
+
+  prenomBlue();
+
+//====================================================================================
+
+  //Demandez à l'internaute son année de naissance et faites afficher son âge dans une fenêtre surgissante.
+
+  var dateNaissance = prompt('Quel est votre année de naissance ?');
+  var age = 2017 - parseInt(dateNaissance);
+  alert('Vous avez donc ' + age + 'ans.');
+
+//====================================================================================
+
+  //JAVASCRIPT : Demandez à l'internaute de renseigner la hauteur d'un rectangle et sa largeur, puis créez une fonction qui se chargera de calculer sa surface et de l'afficher sur votre page web.
+
+  function calculerSurface() {
+    // demande de la hauteur
+    var hauteur = prompt("Entrez la hauteur d'un rectangle en cm");
+    // demande de la largeur
+    var largeur = prompt("Entrez la largeur de ce rectangle en cm");
+    // calcul de la surface
+    var surface = parseInt(hauteur) * parseInt(largeur);
+    // affichage de la surface
+    document.write("La surface du rectangle est de " + surface + " cm2.");
+  }
+
+  calculerSurface();
+
+//====================================================================================
+
+  //Exercice Javascript (Les conditions) : Ecrire un script demandant l'âge de l'internaute. Si l'âge est inférieur à 18, envoyer un message à l'internaute l'informant qu'il n'a pas accès au site. Si l'âge est supérieur à 18, informer l'internaute qu'il peut avoir accès au site web.
+
+  var age = prompt('Quel est votre âge ?');
+  if(age<18){
+    alert('L\'accès au site vous est interdit.');
+  } else{
+    alert('Vous pouvez accéder au site web.');
+  }
+
+
+//====================================================================================
+
+  // Exercice facebook, fnac et amazon.
+
+
+  var lien = prompt('Vers quel site web souhaitez-vous être redirigé ? "Fnac", "Amazon" ou "Facebook" ?');
+
+  document.write('<a href="http://www.'+lien+'.com"">Votre lien vers votre site web...</a>');
+
+
+//====================================================================================
+
+  //Demandez à l'internaute d'entrer un mot de passe qui doit contenir 8 caractères au minimum. Si le mot de passe fait moins de 8 caractères, écrire sur la page en rouge que le mot de passe a été rejeté. S'il fait plus de 8 caractères, écrire sur la page en vert qu'il a été accepté.
+
+  password = prompt("Entrez un mot de passe. Il doit contenir 8 caractères au minimum !");
+
+  if(password.length >= 8) {
+    document.getElementById('motDePasse').innerHTML = '<p style="color:green;">Votre mot de passe est accepté.</p>'; 
+    }
+   else {
+     document.getElementById('motDePasse').innerHTML  = '<p style="color:red;">Votre mot de passe a été rejeté car il ne remplit pas les conditions requises.'; 
+  }
+
+//====================================================================================
+
+  // Ecrivez un code JS où le programme choisit un numéro aléatoire entre 1 et 10 et où l'utilisateur doit deviner le numéro. Indiquer dans une fenêtre surgissante si le numéro a été correctement deviné ou non.
+
+   var numero = Math.ceil(Math.random() * 10);
+   var num = prompt('Choisissez un numéro entre 1 et 10');
+   if (num == numero)
+     alert('Bravo ! Il s\'agit du bon numéro.');
+    else
+     alert('Raté, le numéro à trouver était ' + numero + '.');
+
+
+//====================================================================================
+
+  //Ecrivez un code JS où le programme propose une addition de deux chiffres aléatoires (entre 1 et 9) et demande à l'internaute de donner le résultat. Lui signaler si le résultat est correct, ou non.
+
+  var x = Math.ceil(Math.random() * 10);
+  var y = Math.ceil(Math.random() * 10);
+
+
+  var result = parseInt(prompt('Combien font ' + x + ' et ' + y +' ?'));
+
+  if(result== x+y){
+   alert('Le résultat est correct.');
+  }else{
+   alert('Le résultat est incorrect !');
+  }
+
+  </script>
+  </div>
+  </body>
+</html>

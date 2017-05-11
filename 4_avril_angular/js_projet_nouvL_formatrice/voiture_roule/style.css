@@ -1,0 +1,82 @@
+
+body{
+  background-color: #00ff00;
+  position: fixed;
+}
+
+.ligneBlanche1{
+  height: 1vh;
+  background: white;
+  margin-top: 5vh;
+}
+.ligneBlanche2{
+  height: 1vh;
+  background: white;
+  margin-top: 8vh;
+}
+#toit{
+  height: 3vh;
+  background-color: red;
+  border-radius: 40px / 60px;
+  margin-top: 5vh;
+}
+#fenetre1{
+  height: 20vh;
+  background-color: yellow;
+
+}
+#fenetre2{
+  height: 15vh;
+  border: 4vh solid black;
+  margin-top: 2vh;
+  background-color: blue;
+}
+#tete{
+display: flex;
+flex-wrap: wrap-reverse;
+margin-top: 5vh;
+height: 15vh;
+background: #006600;
+}
+#chemine{
+  height: 20vh;
+  background-color: blue;
+
+}
+#basVoiture{
+  height: 3vh;
+  background: white;
+  position: relative;
+}
+#pneu1{
+  border-radius: 50%;
+  background: red;
+  height: 10vh;
+  margin-left: 8vh;
+  margin-top: 1vh;
+  position: relative;
+}
+#pneu2{
+  border-radius: 50%;
+  background: red;
+  height: 10vh;
+  margin-left: 8vh;
+}
+#pneu3{
+  border-radius: 50%;
+  background: red;
+  height: 10vh;
+  margin-left: 8vh;
+}
+.intPneu{
+  border-radius: 50%;
+  background: black;
+  height: 8vh;
+  margin-top: 1vh;
+}
+#fond{
+position: relative;
+}
+#stop, #run{
+  margin-top: 4vh;
+}

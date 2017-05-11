@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simplon Sarcelles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  </head>
+  <body>
+    <!--DEBUT SECTION LIVRE D'OR  AVOTRA  -->
+    <section class="container col-lg-12 ar" >
+      <div id="titre_ar" style="color:white;" class="col-lg-offset-4 col-lg-4"><h2>LIVRE D'OR</h2></div>
+      <div class="row livre_or_ecrire ar">
+        <div class="col-lg-offset-1 col-lg-4">
+          <form action="traitement.php" method="post" class="">
+            <fieldset>
+              <p>
+                <label for="nom" class="form-control" style="background-color:#cc0000;color:white;">Votre Nom:</label>
+                <input type="text" name="nom" value="nom" placeholder="nom" class="form-control"/>
+              </p>
+              <p>
+                <label for="adresse_mail" class="form-control" style="background-color:#cc0000;color:white;">Votre adresse mail:</label>
+                <input type="text" name="adresse_mail" value="adresse_mail" placehollder="adresse mail" class="form-control"/>
+              </p>
+              <p>
+                <label for="appreciation" class="form-control"style="background-color:#cc0000;color:white;">Appréciations:</label>
+                <textarea name="appreciation" rows="5" cols="100" class="form-control">Ecrivez ici vos appréciations. par exemple:Je suis tellement fière d'être parmi les simploniens.nes.A Sarcelles on a des formateurs et responsables sympa. Le local c'est le top. Simplon Sarcelles est super bien placé. Le tramway 5 est juste au pied de l'immeuble où il y a Simplon. En gros, nous apprenons dans une bonne condition et il nous reste plus qu'à bien travailler.
+                </textarea>
+              </p>
+              <button type="submit" name="envoyer" class="btn btn-primary"style="background-color:#cc0000;color:white;border:none;">Envoyer</button>
+            </fieldset>
+            </form>
+        </div> <!-- DIV LIVRE D'OR PARTIE POUR ECRIRE FERMEE Class livre_or_ecrire ar(Avotra RKT) -->
+
+      <div class=" table-responsive livre_or_afficher col-lg-offset-1 col-lg-5 ">
+          <table class="table table-bordered table-striped table-condesed">
+          <tr class="success">
+            <th>Noms</th>
+            <th>Appréciations</th>
+          </tr>
+          <tr class="warning">
+            <td>Avotra</br>17-01-2017</td>
+            <td>Vos appréciations s'afficheront ici==> par exemple:Je suis tellement fière d'être parmi les simploniens.nes.A Sarcelles on a des formateurs et responsables sympa. Le local c'est top. Simplon Sarcelles est super bien placé. Le tramway 5 est juste au pied de l'immeuble où il y a Simplon. En gros, nous apprenons dans une bonne condition et il nous reste plus qu'à bien travailler.</td>
+          </tr>
+          <tr class="active">
+            <td>Laura</br>25-02-2017</td>
+            <td>Vos appréciations s'afficheront ici==> par exemple:A Simplon Sarcelles, on nous apprends l'autonomie et l'entraide. C'est sûr que après cette formation j'aurai l'esprit développeur (hacker)</td>
+          </tr>
+          </table>
+        </div><!-- DIV LIVRE D'OR PARTIE POUR AFFICHER FERMEE Class livre_d'or_ecrire ar(Avotra RKT) -->
+
+      </div> <!-- ROW LIVRE D'OR PARTIE POUR ECRIRE & AFFICHERFERMEE Class livre_d'or_ecrire ar(Avotra RKT) -->
+    </section>
+    <!--FIN SECTION LIVRE D'OR  AVOTRA-->
+  </body>
+</html>

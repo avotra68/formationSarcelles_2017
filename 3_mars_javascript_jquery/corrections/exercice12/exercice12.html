@@ -1,0 +1,53 @@
+<!--
+
+Vous créez un <div> et vous trouvez le moyen de cliquer et le déplacer librement dans le navigateur à l'aide de la librairie jQuery-UI.
+
+-->
+
+​<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercices JQuery</title>
+		<meta charset="utf-8">
+    <script src="jquery-3.2.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+​		<style>
+		.container {
+				width: 200px;
+				height: 600px;
+				background-color : pink;
+			}
+
+			#un {
+				width: 200px;
+				height: 200px;
+				/*position: relative;*/
+				background-color : olive;
+			}
+
+		</style>
+
+	</head>
+
+​	<body>
+
+		<div class="container">
+			<div id="un"></div>
+		</div>
+
+		<script>
+			$( function() {
+			    $( "#un" ).draggable({
+			    	//axis: "y",
+			    	revert: true,
+			    	containment: "parent",
+			    	stop: function(){alert();},
+			    });
+			} );
+
+		</script>
+	</body>
+</html>
+
+​

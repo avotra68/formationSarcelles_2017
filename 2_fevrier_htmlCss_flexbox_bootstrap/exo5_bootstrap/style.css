@@ -1,0 +1,50 @@
+
+.container{
+  margin-top: auto;
+}
+.chapeau1, .chapeau2{
+  background-color:green;
+  height: 50px;
+}
+.face{
+  background-color: yellow;
+  height: 500px;
+}
+
+.menton_bas{
+  background-color: yellow;
+}
+ 
+}
+.menton_bas{
+  height: 40px;
+}
+
+.oeilG, .oeilD{
+  height: 40px;
+  border-radius: 60px / 40px;
+  background: black;
+}
+.nez{
+  height: 69px;
+  -webkit-border-radius: 10px / 16px;
+  -moz-border-radius:    10px / 16px;
+  border-radius:         440px / 248px;
+    background: #800000;
+}
+.bouche_droit{
+  height: 40px;
+  background-color: black;
+  border-radius:10px 0 0 0;
+}
+.bouche_milieu{
+  height:30px;
+  background: black;
+  border-radius:0 0 10px 10px;
+}
+.bG{
+  border-radius:10px 10px 0 0;
+}
+.bD{
+  border-radius:10px 10px 0 0;
+}

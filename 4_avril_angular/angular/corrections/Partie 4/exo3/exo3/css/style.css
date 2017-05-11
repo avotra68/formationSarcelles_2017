@@ -1,0 +1,40 @@
+.Questions{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.Questions button{
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: rgb(127, 47, 217);
+  color: black;
+  height: 80px;
+  font-size: 20px;
+}
+
+.Questions button:hover{
+  color: white;
+  background-color: rgb(219, 23, 129);
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.score button{
+  margin-top: 100px;
+  width: 200px;
+  margin-left: 43%;
+  height: 60px;
+  color: yellow;
+  background-color: black;
+  border-radius: 10px;
+  border: 5px double yellow;
+  font-size: 20px;
+}
+
+.score button:hover{
+  color: black;
+  background-color: yellow;
+  border: 5px double black;
+  font-weight: bold;
+}

@@ -1,0 +1,126 @@
+<!--
+Réalisez une galerie d'images (toujours en jQuery) :
+- 1° en cliquant sur une vignette, l'image apparaît en grand
+- 2° Puis vous ajoutez le titre sous l'image : il provient de l'attribut alt de la vignette
+- 3° Enfin vous mettez la bordure de la vignette sélectionnée en rouge
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice JQuery 9</title>
+
+  <style>
+  body {
+    background: #12121C;
+  }
+
+  #galerie {
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border: 10px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1);
+  }
+
+  #galerie img {
+    width: 750px;
+    height: 500px;
+  }
+
+  .container{
+    width: 750px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .thumbnail  {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+  }
+
+  .thumbnail:hover {
+    cursor: pointer;
+  }
+
+  .titre {
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    color: #fff;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
+  }
+
+  .selected {
+    border: 2px solid #C63333;
+  }
+
+  </style>
+  <script src="jquery-3.2.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="galerie">
+      <img src="" alt="">
+      <div class="titre"></div>
+    </div>
+    <div>
+      <img class="thumbnail" src="galerie/foret1.jpg"  alt="Forêt avec rayon de soleil">
+      <img class="thumbnail" src="galerie/foret2.jpg"  alt="Arbres noueux">
+      <img class="thumbnail" src="galerie/foret3.jpg"  alt="Forêt en automne">
+      <img class="thumbnail" src="galerie/foret4.jpg"  alt="Forêt en hiver">
+    </div>
+  </div>
+
+  <script>
+   $(function(){
+    //  $(".thumbnail").click(function(){
+    //    var url = $(this).attr("src");
+    //    var title = $(this).attr("alt");
+     //
+    //    $("#galerie img").attr("src", url);
+    //    $(".titre").text(title);
+    //  });
+
+     //  Afficher la premère image:
+     var url = $(".thumbnail").eq(0).attr("src");
+     var titre = $(".thumbnail").eq(0).attr("alt");
+
+     $("#galerie img").attr("src", url);
+     $(".titre").html(titre);
+
+    //  Attention ne pas mettre le point à "selected".
+     $(".thumbnail").eq(0).addClass("selected");
+
+    //  Afficher les autres images :
+    $(".thumbnail").click(function(){
+      url = $(this).attr("src");
+      titre = $(this).attr("alt");
+
+      $("#galerie img").attr("src", url);
+      $(".titre").html(titre);
+
+      // Mettre en blanc toutes les vignettes :
+      $(".thumbnail").removeClass("selected");
+
+      // Mettre en rouge la vignette sélectionnée :
+      $(this).addClass("selected");
+      // this se réfère à la classe .thumbnail sur laquelle on a cliqué.
+    });
+   });
+  </script>
+</body>
+</html>

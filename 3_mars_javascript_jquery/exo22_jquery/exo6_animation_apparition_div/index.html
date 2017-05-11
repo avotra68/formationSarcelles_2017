@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo6_apparition_en_fondu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+         var btn=$('#btn');
+         var fondu=$('#fondu');
+         fondu.hide();
+         btn.click(function () {
+           fondu.fadeIn(1000,'linear');
+           fondu.fadeOut(1000,'swing');
+           btn.hide(3000);
+           btn.show(1000);
+         });
+      });
+
+    /*Les méthodes fadeIn() et fadeOut() sont complémentaires des méthodes hide() et show(). Elles agissent toutes deux progressivement sur l'opacité d'un élément. La première affiche l'élément et la deuxième fait disparaître l'élément*
+
+    Dans leur forme la plus simple, les méthodes fadeIn() et fadeOut() ne demandent aucun paramètre. Dans ce cas, l'apparition ou la disparition se fait en 400 millisecondes :
+        $('sel').fadeIn();
+        $('sel').fadeOut();
+    */
+  </script>
+  </head>
+  <body>
+    <!--Exercice 22>exo6 jquery:
+
+    ##Exercice 6
+    Au clic sur un bouton "Faire apparaître" : un <div> de couleur apparaît en fondu en 1s, puis au bout d'1s disparaît en fondu en 1s.
+    Dans un second temps, faites en sorte que le bouton disparaisse au début de l'animation, puis réapparaisse à la fin de l'animation..-->
+    <button id="btn" type="button" name="button">cliquer ici pour animer la page</button>
+    <div id="fondu">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+  </body>
+</html>

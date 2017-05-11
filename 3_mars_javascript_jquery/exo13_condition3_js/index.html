@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>redirection_url_location</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--Exercice 13 (exo6jp)  javascript : Demandez à l'internaute de renseigner le nom du site web vers lequel il veut être redirigé ("fnac", "facebook" ou "amazon"), puis créez un lien hypertexte qui le redirigera automatiquement vers la page web du site en question.
+   -->
+
+
+  <script>
+    var url;
+    url=prompt('Renseigner le nom du site web vers lequel vous souhaitz être redirigé').toUpperCase();
+    // on peut aj
+    switch (url) {
+      case 'FNAC':location.href='http://www.fnac.com';
+        break;
+      case 'FACEBOOK': location.href='https://fr-fr.facebook.com/';
+        break;
+      case 'AMAZON':   location.href='https://www.amazon.fr/';
+        break;
+      default:
+      alert('vous avez fait une faute de saisie ou mettez tout en minuscule');
+    }
+    // Pourquoi ça a pas marché==>function urlCheck(){
+    //   if(url='fnac'){
+    //     location.href='http://www.fnac.com';
+    //   }
+    //   else if (url='faceboo*$k'){
+    //     location.href='https://fr-fr.facebook.com/';
+    //   }
+    //   else if (url='amazon'){
+    //     location.href='https://www.amazon.fr/';
+    //   }
+    //   else{
+    //     alert('vous avez fait une faute de saisie ou mettez tout en minuscule');
+    //   }
+    // }urlCheck()
+  </script>
+  </body>
+</html>

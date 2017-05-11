@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#conteneur{
+  width: 1000px;
+  height: 600px;
+  border: 2px solid black;
+  margin-left: 100px;
+}
+#haut{
+  height:100px;
+  width: 100%;
+  background-color:#00ccff;
+}
+#menu{
+  height: 30px;
+  width: 100%;
+  background-color: #ff0066;
+}
+#A, #B, #C, #D{
+  width: 50%;
+  height: 200px;
+}
+#A{
+  background-color:#00ccff;
+}
+#B{
+  background-color: #ffcc00;
+}
+#C{
+  background-color: #9966ff;
+}
+#D{
+  background-color: #ff0066;
+}
+footer{
+  background-color:#00ccff;
+  height: 50px;
+  /*width: 100%; PAS BESOIN DE METTRE CAR IL SE BASE SUR LE WIDTH PARENT */
+}
+main{
+  margin: 10px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}

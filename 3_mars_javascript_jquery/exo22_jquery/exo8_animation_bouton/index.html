@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exo8_animation_boutons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--INCLURE JQUERY DANS LA PAGE WEB VIA LE SERVER googleapis
+  Explication:  -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        $('#Btn-monter').click(function() {
+          $('#monter').animate({top :'-200px'},5000).animate({top :'0'},5000);
+
+        });
+        $('#Btn-DG').click(function() {
+          $('#DG').animate({right :'-400px'},5000).animate({left :'0'});
+        });
+
+// fin ready function
+        });
+
+
+
+
+  </script>
+  </head>
+  <body>
+    <!--Exercice 22>exo8 jquery:
+
+    ##Exercice 8
+    Vous créez 4 boutons pour animer 4 <div> carrés.
+Animation 1 : monter de 200px. Ne marche qu'une fois.
+Animation 2 : partir en diagonale haut-droite de 200px. Ne marque qu'une fois.
+Animation 3 : partir en diagonale bas-droite de 100px puis en diagonale haut-droite de 100px. A chaque clic, le carré continue son déplacement.
+Animation 4 : partir à droite de 400px puis revenir à gauche. L'animation continue indéfiniment.
+.-->
+<div class="row">
+  <div class="btn-group col-lg-offset-2 col-lg-8" role="group" aria-label="Basic example">
+    <button type="button" id="Btn-monter"class="btn btn-secondary">Monter 200px</button>
+    <button type="button" id="Btn-D-H-D"class="btn btn-secondary">Partir en diagonale H-D 200px</button>
+    <button type="button" id="Btn-D-B-D" class="btn btn-secondary">Partir en diagonale B-D 100px</button>
+    <button type="button" id="Btn-DG" class="btn btn-secondary">Partir à D 400px/à G</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="col-lg-offset-5 col-lg-2" id="monter" style="background-color:yellow; height:100px; margin-top:210px; position:relative"></div>
+    <div class="col-lg-offset-5 col-lg-2" id="D-H-D" style="background-color:red; height:100px ; margin-top:20px ; position:relative"></div>
+    <div class="col-lg-offset-5 col-lg-2" id="D-B-D" style="background-color:green; height:100px ; margin-top:20px ; position:relative"></div>
+    <div class="col-lg-offset-4 col-lg-2" id="DG" style="background-color:blue; height:100px ; margin-top:20px ; position:relative"></div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

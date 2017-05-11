@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>plusieurs_calculs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--Exercice 17 (exo9jp)  javascript : Demander à l’utilisateur sa pointure et son année de naissance. Créer une fonction qui fait les calculs suivants :
+
+    Multiplier la pointure par 2
+    Ajouter 5 au résultat
+    Multiplier le tout par 50
+    Soustraire l’année de naissance
+    Ajouter au tout 1766
+
+La fonction doit retourner le résultat. Tester avec votre date de naissance et votre pointure. Attention : n'utiliser qu'une seule variable « resultat ».
+   -->
+  <script>
+  var pointure = prompt("ta pointure ");
+  var annee =prompt( "date de naissance");
+  var result = parseInt( (pointure * 2 + 5) * 50 - annee + 1766);
+  alert(result);
+  </script>
+
+  </body>
+</html>
